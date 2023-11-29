@@ -1,0 +1,111 @@
+.com-hd {
+    margin: 20px 0 15px
+}
+
+.com-hd b {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Microsoft Yahei'
+}
+
+.tb-set {
+    border-collapse: collapse
+}
+
+.tb-set tr td {
+    padding: 10px 5px;
+    border: 1px solid #e0e0e0
+}
+
+.actived {
+    color: red
+}
+
+.tb-set tr td input,
+.tb-set tr td img {
+    margin: 0 auto;
+    vertical-align: middle
+}
+
+.tb-set tr td b {
+    color: #000
+}
+
+.tb-set tr td .sel {
+    height: 17px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: 0;
+    color: #333;
+    padding: 3px 1px
+}
+
+.tb-set tr td .sel select {
+    border: 0;
+    outline: 0;
+    width: auto
+}
+
+.tb-set tr td .txt {
+    width: 80%;
+    height: 28px;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    outline: 0;
+    color: #333;
+    padding: 2px 0 2px 5px;
+    margin: -2px 0 0 5px
+}
+
+.tb-set tr td .sec {
+    width: 30px;
+    height: 20px;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    border-radius: 5px;
+    outline: 0;
+    color: #333;
+    padding: 2px 0 2px 5px;
+    margin: -2px 0 0 5px
+}
+
+.tb-set tr td .dy {
+    width: 15%;
+    height: 20px;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    border-radius: 5px;
+    outline: 0;
+    vertical-align: middle;
+    font-weight: bold;
+    color: #0c0;
+    padding: 2px 0 2px 5px;
+    margin: -2px 0 0 5px
+}
+
+.tb-set tr td .txt-lar {
+    width: 450px;
+    height: 100px;
+    border: 1px solid #ccc;
+    line-height: 15px
+}
+
+.tb-set tr td .txt-sho {
+    width: 150px
+}
+
+.message {
+    margin: 1em 0;
+    padding: .5em;
+    height: 30px;
+    line-height: 30px;
+    background: #fff;
+}
+
+.success {
+    border-left: 3px solid #0c0;
+}
+
+.error {
+    border-left: 3px solid #c00;
+}

@@ -1,0 +1,68 @@
+.lsky-upload {
+    padding: 4px 10px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    zoom: 1;
+}
+
+.lsky-upload input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.lsky-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none;
+}
+
+#tip {
+    margin-left: 10px;
+    padding: 0 15px;
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    background: #fff;
+    color: #c00;
+    font-size: 12px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, .05);
+}
+
+#lsky-upload-box {
+    width: auto;
+    height: 100px;
+    border: 3px dashed silver;
+    line-height: 100px;
+    text-align: center;
+    font-size: 20px;
+    color: #d3d3d3;
+    cursor: pointer;
+}
+
+#lsky-upload-box-input {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
