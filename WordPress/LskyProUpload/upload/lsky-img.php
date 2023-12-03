@@ -48,7 +48,7 @@ function add_lsky_upload_button() {
             }).catch(error => {
                 console.log(error);
                 document.getElementById('input-lsky-upload').disabled = false;
-                document.getElementById('tip').innerHTML = '上传图片过程中请耐心等待！请勿刷新页面，如果等待时间过长没有上传成功可以刷新页面重试或检查插件设置';
+                document.getElementById('tip').innerHTML = '上传图片过程中请耐心等待！请勿刷新页面，若等待时间过长可以尝试刷新页面重试或检查插件设置';
             });
         }
     });
@@ -57,7 +57,7 @@ function add_lsky_upload_button() {
 add_action('add_meta_boxes', 'add_lsky_upload_box');
 function add_lsky_upload_box() {
     if(!empty(wp_get_current_user()->roles) && in_array('administrator', wp_get_current_user()->roles)){
-        add_meta_box('lsky_upload_box', '兰空图床(LskyPro)上传', 'lsky_upload_box', 'post', 'side', 'high');
+        add_meta_box('lsky_upload_box_tmp', '兰空图床(LskyPro)上传', 'lsky_upload_box', 'post', 'side', 'high');
     }
     else return 0;
 }
@@ -65,6 +65,7 @@ function lsky_upload_box() {?>
     <link href="<?php echo plugin_dir_url(__FILE__ ); ?>assets/style.css" type="text/css" rel="stylesheet" />
     <div id="lsky-upload-box">点击此区域上传图片</div>
     <input type="file" multiple id="lsky-upload-box-input" />
+    <div id="result"></div>
     <script src="//lib.baomitu.com/axios/0.27.2/axios.min.js"></script>
     <script>
         const lsky_upload_input = document.getElementById('lsky-upload-box-input');
@@ -95,7 +96,14 @@ function lsky_upload_box() {?>
                     if (data.status) {
                         const url = data.data.links.url;
                         const name = data.data.origin_name;
-                        wp.media.editor.insert('<a href="'+ url +'"><img src="'+ url +'" alt="'+ name +'" /></a>');
+                        const input = document.createElement('input');
+                        input.type = 'text';
+                        input.value = url;
+                        document.getElementById('result').appendChild(input);
+                        input.addEventListener('click', function() {
+                            input.select();
+                            document.execCommand('copy');
+                        });
                         document.getElementById('lsky-upload-box-input').disabled = false;
                         document.getElementById('lsky-upload-box').innerHTML = '点击此区域上传图片';
                     }
